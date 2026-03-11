@@ -1,0 +1,257 @@
+body {
+    font-family: Arial, sans-serif;
+    background-image: url('snow.jpg');
+    background-size: cover;
+    background-attachment: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.container {
+    background-color: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    max-width: 70%;
+    width: 100%;
+    height: auto;
+}
+
+h1 {
+    text-align: center;
+    color: #333;
+}
+
+h1 .cardinal {
+    position: relative;
+    display: inline-block;
+}
+
+h1 .cardinal::after {
+    content: '';
+    position: absolute;
+    bottom: -6px;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background-color: red;
+}
+
+h1 .ampersand {
+    position: relative;
+    display: inline-block;
+}
+
+h1 .ampersand::after {
+    content: '';
+    position: absolute;
+    bottom: -6px;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background-color: black;
+}
+
+h1 .white {
+    position: relative;
+    display: inline-block;
+}
+
+h1 .white::after {
+    content: '';
+    position: absolute;
+    bottom: -6px;
+    left: 0;
+    right: 0;
+    height: 2px;
+    background-color: white;
+    border-top: 1px solid black;
+    border-bottom: 1px solid black;
+}
+
+p {
+    text-align: center;
+    color: #666;
+}
+
+.mistakes {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+    gap: 10px;
+}
+
+.mistakes-label {
+    font-weight: bold;
+    color: #333;
+}
+
+.mistake {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: #ddd;
+    margin: 0 5px;
+}
+
+#found-categories {
+    margin-bottom: 20px;
+}
+
+.category-group {
+    border-radius: 8px;
+    padding: 10px;
+    margin-bottom: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.category-group.yellow {
+    background-color: #fff3cd;
+    border: 2px solid #ffc107;
+}
+
+.category-group.green {
+    background-color: #d4edda;
+    border: 2px solid #28a745;
+}
+
+.category-group.blue {
+    background-color: #cce7ff;
+    border: 2px solid #007bff;
+}
+
+.category-group.purple {
+    background-color: #e2d9f3;
+    border: 2px solid #6f42c1;
+}
+
+.category-name {
+    font-weight: bold;
+    margin-bottom: 5px;
+    text-align: center;
+}
+
+.category-group.yellow .category-name {
+    color: #856404;
+}
+
+.category-group.green .category-name {
+    color: #155724;
+}
+
+.category-group.blue .category-name {
+    color: #004085;
+}
+
+.category-group.purple .category-name {
+    color: #4c2882;
+}
+
+.category-words {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+}
+
+.category-word {
+    border-radius: 4px;
+    padding: 5px 10px;
+    font-weight: bold;
+}
+
+.category-group.yellow .category-word {
+    background-color: #ffeaa7;
+    border: 1px solid #ffc107;
+    color: #856404;
+}
+
+.category-group.green .category-word {
+    background-color: #c3e6cb;
+    border: 1px solid #28a745;
+    color: #155724;
+}
+
+.category-group.blue .category-word {
+    background-color: #b3d7ff;
+    border: 1px solid #007bff;
+    color: #004085;
+}
+
+.category-group.purple .category-word {
+    background-color: #d1c4e9;
+    border: 1px solid #6f42c1;
+    color: #4c2882;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.word {
+    background-color: #f0f0f0;
+    border: 2px solid #ddd;
+    border-radius: 5px;
+    padding: 10px;
+    text-align: center;
+    cursor: pointer;
+    transition: background-color 0.3s, border-color 0.3s;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+.word.selected {
+    background-color: #cce7ff;
+    border-color: #007bff;
+}
+
+.word.correct {
+    background-color: #d4edda;
+    border-color: #28a745;
+    color: #155724;
+}
+
+.word.incorrect {
+    background-color: #f8d7da;
+    border-color: #dc3545;
+    color: #721c24;
+}
+
+button {
+    display: inline-block;
+    margin: 10px 5px;
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+button:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+}
+
+button:hover:not(:disabled) {
+    background-color: #0056b3;
+}
+
+#message {
+    text-align: center;
+    margin-top: 20px;
+    font-weight: bold;
+}
+
+.button-container {
+    text-align: center;
+}

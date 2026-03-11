@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Connections Game</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1><span class="cardinal">Cardinal</span> <span class="ampersand">&</span> <span class="white">White</span> Connections</h1>
+        <p>Group the words into four categories of four.</p>
+        <div class="mistakes">
+            <span class="mistakes-label">Mistakes:</span>
+            <div class="mistake" id="mistake1"></div>
+            <div class="mistake" id="mistake2"></div>
+            <div class="mistake" id="mistake3"></div>
+            <div class="mistake" id="mistake4"></div>
+        </div>
+        <div id="found-categories"></div>
+        <div class="grid" id="grid">
+            <!-- Words here -->
+        </div>
+        <div class="button-container">
+            <button id="submit" disabled>Submit</button>
+            <button id="shuffle">Shuffle</button>
+        </div>
+        <div id="message"></div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
