@@ -201,7 +201,7 @@ function submitGuess() {
         updateGridSelection();
         updateSubmitButton();
         if (mistakes >= 4) {
-            document.getElementById('message').textContent = 'Game Over! You made too many mistakes.';
+            document.getElementById('message').textContent = 'Game Over! Too many mistakes.';
             // Disable all remaining words
             const wordElements = document.querySelectorAll('.word');
             wordElements.forEach(el => {
