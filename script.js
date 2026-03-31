@@ -147,7 +147,7 @@ function submitGuess() {
                 addFoundCategory(foundCategory);
                 document.getElementById('message').textContent = `Correct! ${cat.name}`;
                 if (foundCategories.length === 4) {
-                    document.getElementById('message').textContent = 'Congratulations! You solved all categories!';
+                    document.getElementById('message').textContent = 'Congratulations! You solved all categories! This connections game was created by Will Kanafani.';
                     // Change shuffle button to restart
                     const shuffleBtn = document.getElementById('shuffle');
                     shuffleBtn.textContent = 'Restart';
