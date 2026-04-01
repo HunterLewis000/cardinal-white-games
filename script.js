@@ -11,7 +11,7 @@ const categories = [
     },
     {
         name: "THINGS FOUND UNDER A CLASSROOM TABLE",
-        words: ["DRAWINGS", "GUM", "LEGS", "ZYN"],
+        words: ["DRAWINGS", "GUM", "LEGS", "PENS"],
         difficulty: "blue"
     },
     {
