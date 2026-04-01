@@ -147,7 +147,7 @@ function submitGuess() {
                 addFoundCategory(foundCategory);
                 document.getElementById('message').textContent = `Correct! ${cat.name}`;
                 if (foundCategories.length === 4) {
-                    document.getElementById('message').textContent = 'Congratulations! You solved all categories!';
+                    document.getElementById('message').textContent = 'Congratulations! You solved all categories! This connections game was created by Will Kanafani.';
                     // Change shuffle button to restart
                     const shuffleBtn = document.getElementById('shuffle');
                     shuffleBtn.textContent = 'Restart';
@@ -221,8 +221,16 @@ function submitGuess() {
     }
 }
 
+function shuffleRemaining() {
+    allWords = shuffle(allWords);
+    selectedWords = [];
+    renderGrid();
+    updateGridSelection();
+    updateSubmitButton();
+}
+
 document.getElementById('submit').onclick = submitGuess;
-document.getElementById('shuffle').onclick = initGame;
+document.getElementById('shuffle').onclick = shuffleRemaining;
 
 // Initialize game
 initGame();
